@@ -1,0 +1,30 @@
+<h2>Provider: <%= @provider.name %></h2>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @provider %>
+
+<div>
+  <%= link_to "Edit this provider", edit_provider_path(@provider) %> |
+  <%= link_to "Back to providers", providers_path %>
+
+  <%= button_to "Destroy this provider", @provider, method: :delete %>
+</div>
+
+<br>
+
+<h3>Clients</h3>
+
+<% @provider.clients.each do |client| %>
+
+  <%= render client %>
+  <br.
+<% end %>
+
+<h3>Journals</h3>
+
+<% @provider.all_journals.each do |journal| %>
+
+  <%= render journal %>
+  <br>
+<% end %>

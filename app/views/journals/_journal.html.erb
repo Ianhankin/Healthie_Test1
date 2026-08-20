@@ -1,0 +1,11 @@
+<div id="<%= dom_id journal %>">
+  <div>
+    <strong>Text:</strong>
+    <%= link_to journal.text, journal %>
+  </div>
+
+  <div>
+    <strong>Client:</strong>
+    <%= link_to journal.client.name, journal.client %>
+  </div>
+</div>
